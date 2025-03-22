@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: server
+  datasource:
+    url: jdbc:postgresql://localhost:5432/2connect_server
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+application:
+  security:
+    jwt:
+      secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+      private-key: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCJNSiYHl+lUlu0JIyMVl7ygaDke7iE+3njEakbufVJStAH+uYFX/Yf8jqmVPKr6712kDCkboj2A8kD7+f+wgg1OBVlH30iEZq92j20uO1u1QKDxFGDg649zylko5O24rohJlU19jN7OYcMUhemHLkio17X9YaBMke/mzXE6mXJ2IfiIcAPb3rOXvA973qD0XQM/3GXLlPTWlBy+VLf+RrktsxhAI88UiY/KxERT5zcJtyfFT5zs5xAPfRkKVPlQyAjEtpFGgmPKHwfbL6UzrcU8hQuGG6JK4L8bIJUAzx5pMUOKhoRvuSOhLlO425G7mVGIYIP17e9L/eUUrhDDlYBAgMBAAECggEAEr0xNMq72AxjfJBGpx60tlIrSIlNLicFApTK5SqEluSiJ4owwtMpqOX1n09CxWWGPsclSDqAd3kU3yDI1+u6yz9ETMdRg8b7vKot0JzhG0ikS0gTX0Qra+2l2ETZoRoIvwueilF8aSag4cyPG59t+Y5udE2SzS+yH40ceYRkhSiGVDuwOMcnna/eDm4JRLi6HYbFu7TBa0qLm9M6ooSpK66QVpzXLXMdJ6o/X8lzOXz2lLsapaoqs3Mj3ZdaWpxpTTibZ//WLUIARsR0QHwsE5Bk7N714pymMB/jDjiwq/XVMQlVWdqg+yeHLt1XYEavBuC/s41GGyLkKyQPYENE8QKBgQC5higB0Hpi1HbvCM6Zvbr/Q7zK83SmxH2f4lwFzu/5JCWE4DzCOTOoLDHlP/9digBuBMrNuOoqlLy7xneW3Rm7vD7Uy4cCqTmD3Otf0df3vvdfuBbupM0Sn5eFkMvn2QL80ePlFTSigsCbVE8j6eQwWTfNi7WLmbXvYs12ap5TAwKBgQC9VFQ5clfQVax7vuhLW7+eNmpVHMVQKPKIzHF9aOs0bbUzrWMdmiTwZkb0sUtutwMAr/rBjcOs2OizbYOYv1v2Lt4luEBwzkji4dm4Aje2nElmyDChv8Nb+fcG9eefPS49CXuHE392AtPz2Pek7QRHEjcfIgXAqZthwKJvSwihqwKBgQCmhgWZA1EnLoAGtIgFNWkIwPtPy9Cz9ACyp1JkIEgD/+7xYvkGeKOmWuz6UkRb6IfUONb0avs89z6k6VLkhlcXzLM0++6Wc+DdPEnFOyy4AqA2OZ3T3Pb5tWgjCkIMPBzTY25EbJFPIT/S7I0QtlsNDrfo9nMg9/p3Ad9cX/z2kwKBgD0ezTXicPDjx5QHVGyHiPula3xgll5DadC512V6CnxZcmblcZrr2UL2ca+q0MRENqbxKM11W5cgSzcpgpM8K471IGgi7EK+hY8hBC1AIgZEu/l/ZRvCkWnO722C0yx4DsZLmmJH7B0H2q7c+0116qya98qILD0/Q9cx3f55xaaTAoGBALKvCKi9QxzTrSeT1rhCmC3tKdOFamGgdrGIeBuuWS3ONIvhJ1p+RwVFJtibOC4jlmy/6TlDCyHehycTSe+qSwpm16VKoJOHjh3lWu7PeYX34HIc8oJZaD60qJbOmLWx7txdkNGwhUP04ioOPG8aLwHM3bB4LnweE+duhjetB9Hy
+      public-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiTUomB5fpVJbtCSMjFZe8oGg5Hu4hPt54xGpG7n1SUrQB/rmBV/2H/I6plTyq+u9dpAwpG6I9gPJA+/n/sIINTgVZR99IhGavdo9tLjtbtUCg8RRg4OuPc8pZKOTtuK6ISZVNfYzezmHDFIXphy5IqNe1/WGgTJHv5s1xOplydiH4iHAD296zl7wPe96g9F0DP9xly5T01pQcvlS3/ka5LbMYQCPPFImPysREU+c3CbcnxU+c7OcQD30ZClT5UMgIxLaRRoJjyh8H2y+lM63FPIULhhuiSuC/GyCVAM8eaTFDioaEb7kjoS5TuNuRu5lRiGCD9e3vS/3lFK4Qw5WAQIDAQAB
+      token-expiration: 86400000    # 1 day
+      #expiration: 60000      # 60 seconds
+      refresh-token-expiration: 604800000 # 7 days
+
+server:
+  port: 8222
